@@ -31,7 +31,7 @@ test('Locator syntax', async ({ page }) => {
   // Combine different selectors
   page.locator('input[placeholder = "Email"][type = "input"]')
 
-  // By Xpath (NOT RECOMMENDED)
+  // By Xpath (NOT RECOMMENDED!)
   page.locator('//input[@id = "uniqueId"]')
   page.locator('//*[@id = "uniqueId"]')
 
