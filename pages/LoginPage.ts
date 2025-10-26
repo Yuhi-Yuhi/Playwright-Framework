@@ -1,5 +1,6 @@
 import { Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
+import { User } from "../models/User";
 
 export class LoginPage extends BasePage {
     constructor(page: Page) {
@@ -10,9 +11,9 @@ export class LoginPage extends BasePage {
     private passwordInput = () => this.page.locator('[data-test="password"]');
     private loginButton = () => this.page.locator('[data-test="login-button"]');
 
-    async login(): Promise<void> {
-        await this.usernameInput().fill("sdf");
-        await this.passwordInput().fill("dfdf");
+    async login(user: User): Promise<void> {
+        await this.usernameInput().fill(user.username);
+        await this.passwordInput().fill(user.password);
         await this.loginButton().click();
     }
 }
