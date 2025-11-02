@@ -16,4 +16,8 @@ export class LoginPage extends BasePage {
         await this.passwordInput().fill(user.password);
         await this.loginButton().click();
     }
+
+    async isOnProductsPage(): Promise<boolean> {
+        return this.page.url().includes("inventory");
+    }
 }
