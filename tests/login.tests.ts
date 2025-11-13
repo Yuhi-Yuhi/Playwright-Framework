@@ -4,8 +4,10 @@ import { Users } from '../data/Users';
 
 test('Successful login as standard user', async ({ page }) => {
   const loginPage = new LoginPage(page);
-  await loginPage.navigate("https://www.saucedemo.com/");
-  await loginPage.login(Users.StandardUser);
+  await test.step("Login to inventory portal", async () => {
+    await loginPage.navigate("https://www.saucedemo.com/");
+    await loginPage.login(Users.StandardUser);
+  });
   expect(await loginPage.isOnProductsPage()).toBeTruthy();
 });
 
