@@ -13,6 +13,5 @@
     "allure-playwright": "^3.4.2"
   },
   "dependencies": {
-    "winston": "^3.18.3"
   }
 }

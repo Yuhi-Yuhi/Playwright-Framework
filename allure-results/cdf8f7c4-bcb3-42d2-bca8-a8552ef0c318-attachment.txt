@@ -1,3 +1,0 @@
-info: Specify username: standard_user
-info: Specify password: ****
-info: Click login button

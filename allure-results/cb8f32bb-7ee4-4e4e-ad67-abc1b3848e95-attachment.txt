@@ -1,3 +1,0 @@
-info: Specify username: performance_glitch_user
-info: Specify password: ****
-info: Click login button
